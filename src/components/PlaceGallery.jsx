@@ -9,7 +9,7 @@ export default function PlaceGallery({place}) {
     return (
       <div className="absolute inset-0 bg-black text-white min-h-screen">
         <div className="bg-black p-8 grid gap-4">
-          <div>
+          <div className="w-3/5 mx-auto">
             <h2 className="text-3xl mr-48">Photos of {place.title}</h2>
             <button onClick={() => setShowAllPhotos(false)} className="fixed right-12 top-8 flex gap-1 py-2 px-4 rounded-2xl shadow shadow-black bg-white text-black">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -19,7 +19,7 @@ export default function PlaceGallery({place}) {
             </button>
           </div>
           {place?.photos?.length > 0 && place.photos.map(photo => (
-            <div>
+            <div className="w-3/5 mx-auto">
               <Image src={photo} alt=""/>
             </div>
           ))}
